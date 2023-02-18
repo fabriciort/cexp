@@ -1,8 +1,8 @@
-![ICON](./.img/Logo-Code_Exp.png) 
+<h1 align="center"><img src='.img/Logo-Code_Exp.png' alt='Logo'></h1>
 
-<h2 align="center">C-FY | Repositório de códigos experimentais</h2>
+<h2 align="center">XCodes | Repositório de códigos experimentais</h2>
 
-#### C/C++, CMake, Makefile
+#### C/C++, CMake, Makefile...
 
 ## Topicos iniciais:
   - Fundamentos da linguagem C++
