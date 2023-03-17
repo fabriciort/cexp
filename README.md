@@ -1,4 +1,4 @@
-<h1 align="center"><img src='.img/Logo-Code_Exp_COR2.1.png' alt='Logo'></h1>
+<h1 align="center"><img src='.img/codx.png' alt='Logo'></h1>
 
 <h2 align="center">XCodes | Repositório de códigos experimentais</h2>
 
