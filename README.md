@@ -2,7 +2,8 @@
 
 <h2 align="center">XCodes | Repositório de códigos experimentais</h2>
 
-#### C/C++, CMake, Makefile...
+#### C/C++, [Python](https://python.org)...
+##### Automatization, CMake, Makefile...
 
 ## Topicos iniciais:
   - Fundamentos da linguagem C++
