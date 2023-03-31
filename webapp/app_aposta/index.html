@@ -10,6 +10,7 @@
 		<h2>Lista de Jogadores</h2>
 		<p>Quantidade de jogadores: <span id="num-jogadores"></span></p>
 		<div id="jogadores-lista"></div>
+		<button id="add-jogador-btn"">Adicionar Jogador</button>
 	</div>
 	<div class="opcoes">
 		<h2>Opções</h2>
@@ -17,6 +18,45 @@
 		<button id="ver-apostas-btn">Ver Apostas</button>
 	</div>
 
-	<script type="text/javascript" src="./script.js"></script>
+	<div id="add-jogador-modal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Adicionar Jogador</h2>
+			<label for="nome-jogador-input">Nome:</label>
+			<input type="text" id="nome-jogador-input" placeholder="Insira o nome do jogador">
+			<br>
+			<label for="saldo-jogador-input">Saldo:</label>
+			<input type="number" id="saldo-jogador-input" placeholder="Insira o saldo inicial do jogador">
+			<br>
+			<button id="confirmar-jogador-btn">Confirmar</button>
+		</div>
+	</div>
+
+	<div id="add-aposta-modal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Adicionar Aposta</h2>
+			<label for="jogador-select">Jogador:</label>
+			<select id="jogador-select"></select>
+			<br>
+			<label for="aposta-input">Valor da Aposta:</label>
+			<input type="number" id="aposta-input" placeholder="Insira o valor da aposta">
+			<br>
+			<button id="confirmar-aposta-btn">Confirmar</button>
+		</div>
+	</div>
+
+	<div id="ver-apostas-modal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Apostas dos Jogadores</h2>
+			<div id="apostas-lista"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+  <script>
+    document.getElementById("add-jogador-btn").addEventListener("click", adicionarJogador);
+  </script>
 </body>
 </html>
+

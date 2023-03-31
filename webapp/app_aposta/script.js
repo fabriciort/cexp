@@ -1,11 +1,11 @@
 let jogadores = []; // array vazia para armazenar os jogadores
 
-let numJogadores = parseInt(prompt("Insira o número de jogadores:")); // pede ao usuário para inserir o número de jogadores
+// let numJogadores = parseInt(prompt("Insira o número de jogadores:")); // pede ao usuário para inserir o número de jogadores
 
-for (let i = 1; i <= numJogadores; i++) {
-  let jogador = prompt(`Insira o nome do jogador ${i}:`); // pede ao usuário para inserir o nome do jogador
-  jogadores.push(jogador); // adiciona o jogador à array de jogadores
-}
+// for (let i = 1; i <= numJogadores; i++) {
+//   let jogador = prompt(`Insira o nome do jogador ${i}:`); // pede ao usuário para inserir o nome do jogador
+//   jogadores.push(jogador); // adiciona o jogador à array de jogadores
+// }
 
 function exibirJogadores() {
   // pega a div que irá conter a lista de jogadores
@@ -28,7 +28,7 @@ function exibirJogadores() {
 
 function adicionarJogador() {
   // Pega o input do nome do jogador
-  var jogadorInput = document.getElementById("jogador-input");
+  var jogadorInput = document.getElementById("add-jogador-btn");
   var nomeJogador = jogadorInput.value;
 
   // Cria um objeto jogador com o nome e um array de apostas vazio
