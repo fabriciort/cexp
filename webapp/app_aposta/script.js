@@ -1,84 +1,100 @@
-var jogadores = [];
-var num_jogadores = parseInt(prompt("Quantos jogadores participarão? "));
-for (var i = 0; i < num_jogadores; i++) {
-  jogadores.push({"carteira": 10000, "apostas": []});
+let jogadores = []; // array vazia para armazenar os jogadores
+
+let numJogadores = parseInt(prompt("Insira o número de jogadores:")); // pede ao usuário para inserir o número de jogadores
+
+for (let i = 1; i <= numJogadores; i++) {
+  let jogador = prompt(`Insira o nome do jogador ${i}:`); // pede ao usuário para inserir o nome do jogador
+  jogadores.push(jogador); // adiciona o jogador à array de jogadores
 }
 
-while (true) {
-  console.log("\nCarteira dos jogadores:");
-  for (var i = 0; i < jogadores.length; i++) {
-    console.log("Jogador " + (i+1) + ": " + jogadores[i]["carteira"] + " fichas");
+function exibirJogadores() {
+  // pega a div que irá conter a lista de jogadores
+  const listaJogadores = document.getElementById("jogadores-lista");
+  
+  // limpa a lista de jogadores existente
+  listaJogadores.innerHTML = "";
+  
+  // percorre a lista de jogadores e adiciona cada um à lista na tela
+  for (let jogador of jogadores) {
+    const jogadorDiv = document.createElement("div");
+    jogadorDiv.innerHTML = `<strong>${jogador.nome}</strong> - saldo: R$${jogador.saldo.toFixed(2)}`;
+    listaJogadores.appendChild(jogadorDiv);
   }
-
-  var opcao = prompt("\nO que você deseja fazer? (a) Adicionar aposta, (b) Imprimir apostas, (c) Sair ");
-  if (opcao == "a") {
-    var jogador = jogadores[selecionar_jogador(jogadores)];
-    if (jogador == null) {
-      continue;
-    }
-    adicionar_aposta(jogador);
-  } else if (opcao == "b") {
-    imprimir_apostas(jogadores);
-  } else if (opcao == "c") {
-    break;
-  } else {
-    console.log("Opção inválida. Tente novamente.");
-  }
+  
+  // atualiza a quantidade de jogadores na tela
+  const numJogadores = document.getElementById("num-jogadores");
+  numJogadores.innerHTML = jogadores.length;
 }
 
-function validar_aposta(valor_aposta, saldo_atual) {
-  if (valor_aposta <= 0) {
-    console.log("O valor da aposta deve ser maior que zero.");
-    return false;
-  }
-  if (valor_aposta > saldo_atual) {
-    console.log("Você não tem saldo suficiente para fazer essa aposta.");
-    return false;
-  }
-  return true;
+function adicionarJogador() {
+  // Pega o input do nome do jogador
+  var jogadorInput = document.getElementById("jogador-input");
+  var nomeJogador = jogadorInput.value;
+
+  // Cria um objeto jogador com o nome e um array de apostas vazio
+  var jogador = {
+    nome: nomeJogador,
+    apostas: []
+  };
+
+  // Adiciona o jogador na lista de jogadores
+  jogadores.push(jogador);
+
+  // Limpa o input do nome do jogador
+  jogadorInput.value = "";
+
+  // Atualiza a lista de jogadores exibida na tela
+  exibirJogadores();
 }
 
-function selecionar_jogador(jogadores) {
-  var num_jogadores = jogadores.length;
-  if (num_jogadores == 0) {
-    console.log("Não há jogadores cadastrados.");
-    return null;
+function adicionarAposta() {
+  // Obter a lista de jogadores cadastrados
+  const jogadores = JSON.parse(localStorage.getItem('jogadores')) || [];
+
+  // Verificar se existe pelo menos um jogador cadastrado
+  if (jogadores.length === 0) {
+    alert('Não há jogadores cadastrados!');
+    return;
   }
 
-  while (true) {
-    var opcao = prompt("Selecione um jogador (1-" + num_jogadores + ") ou pressione Enter para voltar: ");
-    if (opcao == "") {
-      return null;
-    }
-    try {
-      var index = parseInt(opcao) - 1;
-      if (index < 0 || index >= num_jogadores) {
-        throw new Error();
-      }
-      return index;
-    } catch(e) {
-      console.log("Opção inválida. Tente novamente.");
-    }
+  // Preencher o select com as opções de jogadores
+  const selectJogador = document.getElementById('jogador-select');
+  selectJogador.innerHTML = '';
+  for (let i = 0; i < jogadores.length; i++) {
+    const option = document.createElement('option');
+    option.value = jogadores[i].id;
+    option.innerText = jogadores[i].nome;
+    selectJogador.appendChild(option);
   }
+
+  // Exibir o modal de adicionar aposta
+  const modal = document.getElementById('add-aposta-modal');
+  modal.style.display = 'block';
 }
 
-function adicionar_aposta(jogador) {
-  var aposta = prompt("Insira a sua aposta: ");
-  try {
-    aposta = parseInt(aposta);
-    if (validar_aposta(aposta, jogador["carteira"])) {
-      jogador["carteira"] -= aposta;
-      jogador["apostas"].push(aposta);
-      console.log("Aposta adicionada com sucesso!");
-    }
-  } catch(e) {
-    console.log("A aposta deve ser um número inteiro.");
+function verApostas() {
+  // Obter a lista de jogadores e apostas
+  const jogadores = Object.keys(carteira);
+  const listaApostas = jogadores.map(jogador => {
+    const valorApostas = carteira[jogador].reduce((total, aposta) => total + aposta, 0);
+    return `${jogador}: R$ ${valorApostas.toFixed(2)}`;
+  });
+
+  // Atualizar o conteúdo da div "apostas-lista"
+  const apostasLista = document.getElementById("apostas-lista");
+  apostasLista.innerHTML = "";
+  for (const aposta of listaApostas) {
+    const apostaElement = document.createElement("p");
+    apostaElement.textContent = aposta;
+    apostasLista.appendChild(apostaElement);
   }
+
+  // Exibir o modal de ver apostas
+  const verApostasModal = document.getElementById("ver-apostas-modal");
+  verApostasModal.style.display = "block";
 }
 
-function imprimir_apostas(jogadores) {
-  for (var i = 0; i < jogadores.length; i++) {
-    console.log("Jogador " + (i+1) + ": " + jogadores[i]["apostas"].join(", "));
-  }
-}
+document.getElementById("add-jogador-btn").addEventListener("click", adicionarJogador);
+document.getElementById("add-aposta-btn").addEventListener("click", adicionarAposta);
+document.getElementById("ver-apostas-btn").addEventListener("click", verApostas);
 
