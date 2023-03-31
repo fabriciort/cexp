@@ -22,6 +22,15 @@ def main():
         else:
             print("Opção inválida. Tente novamente.")
 
+def validar_aposta(valor_aposta, saldo_atual):
+    if valor_aposta <= 0:
+        print("O valor da aposta deve ser maior que zero.")
+        return False
+    if valor_aposta > saldo_atual:
+        print("Você não tem saldo suficiente para fazer essa aposta.")
+        return False
+    return True
+
 def selecionar_jogador(jogadores):
     num_jogadores = len(jogadores)
     if num_jogadores == 0:
