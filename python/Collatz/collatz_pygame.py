@@ -1,13 +1,14 @@
 import pygame
 import random
+import math
 import sys
-from collatz_sequence_PIL import collatz_sequence  # Importe a função collatz_sequence do exemplo anterior
+from collatz_sequence import collatz_sequence
 
 # Inicializa o Pygame
 pygame.init()
 
 # Tamanho da janela
-width, height = 800, 600
+width, height = 800, 800
 
 # Cores pastel
 colors = [
@@ -20,7 +21,7 @@ colors = [
 
 # Configura a tela
 screen = pygame.display.set_mode((width, height))
-pygame.display.set_caption("Collatz Conjecture Animation")
+pygame.display.set_caption("Collatz Conjecture Tree Animation")
 
 # Relógio para controlar a taxa de quadros
 clock = pygame.time.Clock()
@@ -29,39 +30,47 @@ clock = pygame.time.Clock()
 running = True
 sequence_drawn = False
 
+def draw_collatz_tree(screen, n, x, y, angle, length, color):
+    if n > 1:
+        # Calcula as coordenadas do próximo ponto
+        new_x = x + length * math.cos(math.radians(angle))
+        new_y = y - length * math.sin(math.radians(angle))
+
+        # Desenha a linha
+        pygame.draw.line(screen, color, (x, y), (new_x, new_y), 2)
+
+        # Recursivamente desenha os ramos
+        seq = collatz_sequence(n)
+        for i in range(1, len(seq)):
+            new_angle = angle + seq[i] * 15
+            draw_collatz_tree(screen, seq[i], new_x, new_y, new_angle, length * 0.75, color)
+
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
     if not sequence_drawn:
+        # Limpa a tela
+        screen.fill((255, 255, 255))
+
         # Gera uma sequência de Collatz aleatória
-        n = random.randint(2, 10000)
-        seq = collatz_sequence(n)
+        n = random.randint(2, 1000)
 
         # Escolhe uma cor aleatória
         color = random.choice(colors)
 
-        # Desenha a sequência de Collatz na tela
-        max_value = max(seq)
-        x_step = float(width) / len(seq)
-        y_step = float(height) / max_value
-
-        for i in range(1, len(seq)):
-            x1, y1 = (i - 1) * x_step, height - seq[i - 1] * y_step
-            x2, y2 = i * x_step, height - seq[i] * y_step
-            pygame.draw.line(screen, color, (x1, y1), (x2, y2), 2)
+        # Desenha a "flor" ou "galhos" de árvore usando a sequência de Collatz
+        draw_collatz_tree(screen, n, width / 2, height * 0.9, -90, 150, color)
 
         # Atualiza a tela
         pygame.display.flip()
 
         # Aguarda um curto intervalo antes de desenhar a próxima sequência
-        pygame.time.delay(1000)
+        pygame.time.delay(3000)
         sequence_drawn = True
 
     else:
-        # Limpa a tela e prepara para desenhar a próxima sequência
-        screen.fill((255, 255, 255))
         sequence_drawn = False
 
     # Controla a taxa de quadros
@@ -70,3 +79,4 @@ while running:
 # Encerra o Pygame
 pygame.quit()
 sys.exit()
+
