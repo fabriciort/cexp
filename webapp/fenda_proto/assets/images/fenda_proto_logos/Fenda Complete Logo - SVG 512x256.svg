@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 512 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-0.0788442,-142.5)">
+        <g transform="matrix(2.63862,0,0,2.88822,-969.548,-17.0701)">
+            <g transform="matrix(60,0,0,60,403.228,119.949)">
+            </g>
+            <text x="376.948px" y="119.949px" style="font-family:'Floane-Regular', 'Floane';font-size:60px;fill:rgb(170,206,255);">F</text>
+        </g>
+        <g transform="matrix(2.82353,0,0,2.82353,-498.944,-421.266)">
+            <g transform="matrix(60,0,0,60,348.293,265.969)">
+            </g>
+            <text x="240.293px" y="265.969px" style="font-family:'Millimetre-Regular', 'Millimetre', sans-serif;font-weight:500;font-size:60px;fill:rgb(170,206,255);">NDA</text>
+        </g>
+        <g transform="matrix(1,-0,-0,1,0.0788442,142.5)">
+            <use xlink:href="#_Image1" x="101.921" y="88.5" width="57px" height="81px"/>
+        </g>
+        <g transform="matrix(2.14499e-18,0.239444,-0.240443,1.79579e-17,193.479,247.992)">
+            <path d="M102,41.983C102,39.785 100.208,38 98,38L90,38C87.792,38 86,39.785 86,41.983L86,129.017C86,131.215 87.792,133 90,133L98,133C100.208,133 102,131.215 102,129.017L102,41.983Z" style="fill:rgb(170,206,255);"/>
+        </g>
+        <g transform="matrix(4.86825e-18,0.711159,-0.545706,5.33359e-17,113.079,149.651)">
+            <path d="M102,43.213C102,40.336 100.208,38 98,38L90,38C87.792,38 86,40.336 86,43.213L86,127.787C86,130.664 87.792,133 90,133L98,133C100.208,133 102,130.664 102,127.787L102,43.213Z" style="fill:rgb(170,206,255);"/>
+        </g>
+        <g transform="matrix(6.37073e-18,0.711159,-0.714127,5.33359e-17,196.479,149.651)">
+            <path d="M102,41.983C102,39.785 100.208,38 98,38L90,38C87.792,38 86,39.785 86,41.983L86,129.017C86,131.215 87.792,133 90,133L98,133C100.208,133 102,131.215 102,129.017L102,41.983Z" style="fill:rgb(170,206,255);"/>
+        </g>
+        <g transform="matrix(6.37073e-18,0.711159,-0.714127,5.33359e-17,196.479,257.651)">
+            <path d="M102,41.983C102,39.785 100.208,38 98,38L90,38C87.792,38 86,39.785 86,41.983L86,129.017C86,131.215 87.792,133 90,133L98,133C100.208,133 102,131.215 102,129.017L102,41.983Z" style="fill:rgb(170,206,255);"/>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image1" width="57px" height="81px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAABRCAYAAABovw6yAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEM0lEQVR4nO2bMa8UMQyE7fuvFBQUFDQUFBT8FISEkBASQvy6peCSm0zGibMHEosyxbvNPsdjL9pv/e4Of/HxOOxJ3dzM3czhGM81aze7GRxH50RMlH+Y236fe0ru99dy7I9z5fcOBWHxJczrDziH8bgPYjp/e/hjnuebNNGEiSZKAaN9VGC9YC6aoH1NDPlvbV1IfoauM/JJElqCspkYOhfFNP7nLk3z8rj5y7FZB5GyxhhFQoZKF0P+I/CVmOUmu8RoGFGOYvhRMCJx2Ah4GeQx7/dsbV1Iaboq8jFRUzOpoqitkRjXM/818NBNHMFgOpMa7RH70EtRtoHKhMTpR4gqCAtXlJPNexsTkVgRNCJxbW5W49bWNTSk6x+bSUWe1Eyq8if8ldf4KhDlwpkUb/SAcpgnNZPChVYwMsijxrmyDptUlIM6JOXkTIqFrxAVsMj+snm6SPUCRA1ubf2b6ugq6bRAuQxRhzOp8Jr5z2I68CgS4o3exAjKRbOsQ0xE4ggqNX/gH8Lw/sumSUlCotypoVyQkEmMXuzPXvgP0D2KVMzW1nXkLz4ex4hWGYItk9AoZ9I/U090rgUI3ejTcY72RDENCQdenKcZ53iP8CoHeO7WNVGSc6IZwYIY9Qhpihp4NReAm1DNe59na+ti8pefftN16XN/WyPxMzNpVM/abC1uYqSTmYU3NYNmOs4xiKz1Yn/2imKwRuN9dp9dmWAcVAtnyk0aqU1Q7nAmdR2zUqMi8dbWheSvPh9H5v3LZ/86H86knvjcP8ideTLcQsoZJCrnASJlnaGcnEkHXnjOYJ8icUR9rPEWUa4mDwiGxWRIOCOqQQz6z2ZStzZe1bi1dSH56y93up6gXG5u1JSNvM5+S2tcIwGiI6rFlOuohvGCchF8GGLo1QGN/Ic1QvMh5UYFKRJ2TVi/xovUFBh4GaxN+PPjSj32trYuJH/z9ThS327idYJyq7QMZ9LAa+V/IISjkrr5mYQjykkYMSwgpvpPwIc1wouusTRpIlGzkZsIKOdRDJyLvFx4lYNRjdw8e21tXUz+9hu872onSEiUS5MQyOdinZ5bRQzfjvUtSbsfyJtagAa2xPus3YdeFVCm9xmszXp/jmFgNk3O5j2mXNQIxtSl0z4XhVOMbC6oES9Ye7C1dVn5u+/HwYT6azNpJs/AP6rn8b6q1mN2tZhgZnnKqZGv5oC4kKj1R0/iCHwz1W9kjSiHiWUMFmNtDBaEhSsSR48vrrG5AJuoW/+X/P2P++xqY8qFFLX5vBkR9ey3tDJERdVvZHW0rD8ERGjdQERQNoJKAxHh3xHd2ph0k7OZtBYsKLc8lAsSy5kUmyOv6r+19X/KP/yMP9VCop39bkCGxJk85dwZ3aJ5c3mcY6JOYmzgpWC0jNSmSWzORFFQdERUFVP7mDRisA9eNK1P6hd9zTef6ow+eQAAAABJRU5ErkJggg=="/>
+    </defs>
+</svg>
