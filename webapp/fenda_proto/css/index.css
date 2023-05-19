@@ -1,5 +1,7 @@
 /*FENDA*/
 
+
+
 * {
   color: #AACEFF;
 }
@@ -7,3 +9,134 @@
 body {
   background: #0D1014;
 }
+
+.web-title {
+  font-family:'Millimetre Regular';
+  font-weight: normal;
+  font-size: 2em;
+}
+
+header {
+  text-align: center;
+  margin-top: 1em; /* Ajuste a distância superior conforme necessário */
+  margin-bottom: 1em; /* Ajuste a distância inferior conforme necessário */
+  margin: 2rem;
+  padding: 1em;
+}
+
+/* Estilo da barra de navegação */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(5, 5, 5, 0.5); /* Fundo da barra com transparência */
+  -webkit-backdrop-filter: blur(10px); /* Efeito de desfoque */
+  backdrop-filter: blur(10px); /* Efeito de desfoque */
+  z-index: 9999; /* Garante que a barra fique acima do conteúdo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.10em solid #252525;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0px 3px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: 'Millimetre Regular', sans-serif;
+  color: #7b7b7b;
+  /* background-color: #252525; */
+  transition: all .35s ease;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 18px;
+  border-radius: 10px;
+  border: 0.35px solid #252525;
+}
+
+nav ul li a:hover {
+  color: #AACEFF;
+  background-color: #aacdff30;
+  border-radius: 28px;
+  border: 0.35px solid #93d7ff;
+  padding: 18px;
+  /* border-radius: 0.5em; */
+}
+
+.logo {
+  align-content: left;
+  justify-content: left;
+}
+
+.logo img{
+  width: 100px;
+  padding: 12px;
+  margin: 5px;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  transition: all 0.2s ease;
+}
+
+.logo img:hover{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/*Font face Defs*/
+
+@font-face {
+  font-family: 'Floane Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Floane Regular'), url('/assets/fonts/floane/Floane-Regular.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Floane Regular Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Floane Regular Italic'), url('/assets/fonts/floane/Floane-RegularItalic.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Floane Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Floane Bold'), url('/assets/fonts/floane/Floane-Bold.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Floane Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Floane Bold Italic'), url('/assets/fonts/floane/Floane-BoldItalic.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Millimetre Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Millimetre Regular'), url('/assets/fonts/millimetre/Millimetre-Regular.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Millimetre Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Millimetre Bold'), url('/assets/fonts/millimetre/Millimetre-Bold.woff') format('woff');
+    }
