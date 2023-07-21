@@ -2,8 +2,8 @@
 
 
 
-* {
-  color: #AACEFF;
+/* * { */
+  /* color: #AACEFF; */
 }
 
 body {
@@ -31,8 +31,8 @@ nav {
   left: 0;
   width: 100%;
   background-color: rgba(5, 5, 5, 0.5); /* Fundo da barra com transparência */
-  -webkit-backdrop-filter: blur(10px); /* Efeito de desfoque */
-  backdrop-filter: blur(10px); /* Efeito de desfoque */
+  -webkit-backdrop-filter: blur(18px); /* Efeito de desfoque */
+  backdrop-filter: blur(18px); /* Efeito de desfoque */
   z-index: 9999; /* Garante que a barra fique acima do conteúdo */
   display: flex;
   justify-content: center;
