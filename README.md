@@ -1,6 +1,6 @@
-<h1 align="center"><img src='.img/codx.png' alt='Logo'></h1>
+<h3 align="center"><img src='.img/Hex.png' alt='Logo'></h3>
 
-<h2 align="center">XCodes | Repositório de códigos experimentais</h2>
+<h2 align="center">Lactusferal | experimentos</h2>
 
 #### C/C++, [Python](https://python.org)...
 ##### Automatization, CMake, Makefile...
