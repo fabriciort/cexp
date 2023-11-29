@@ -15,3 +15,6 @@
 
 ## Softwares Utéis:
   - [https://godbolt.org/](https://godbolt.org/), observar um resultado _"Low Level"_ da linguagem, como `assembly`
+
+> [!IMPORTANT]
+> Repositório lixo, ou seja, nada sério nem mesmo para testes é feito por aqui, somente um repositório literalmente para testes em diferentes SOs
