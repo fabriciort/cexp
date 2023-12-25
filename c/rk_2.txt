@@ -1,0 +1,1 @@
+Notes: Este código altera as funções de entrada e saída de DLLs de forma que elas sejam executadas dentro da própria função main(). Assim, qualquer aplicativo que use essa DLL será infectado pelo rootkit. Ele vai adicionar uma data de criação falso à DLL para evitar a detecção antivírus.
